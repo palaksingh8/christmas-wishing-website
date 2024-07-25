@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #ffcccc, #ccffcc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: #4b2e83;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.message h1, .message h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.message p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.message img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 2s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4b2e83;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 2s ease-in-out;
+}
+
+button:hover {
+    background-color: #3a216a;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 2s;
+}
+
+#countdown {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #ff0000;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+/* Name Styling */
+.user-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: #d4af37; /* Gold color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #d4af37, 0 0 40px #d4af37, 0 0 50px #d4af37, 0 0 60px #d4af37; }
+    to { text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b, 0 0 70px #ffeb3b; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    .message h1, .message h2 {
+        font-size: 2.5em;
+    }
+    .message p {
+        font-size: 1.2em;
+    }
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+    #countdown {
+        font-size: 1.5em;
+    }
+}
